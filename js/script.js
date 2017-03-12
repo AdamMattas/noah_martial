@@ -11,4 +11,4 @@ function getParameterByName(name, url) {
 }
 
 var success = getParameterByName('success');
-conssole.log('Success: ' + success);
+console.log('Success: ' + success);
