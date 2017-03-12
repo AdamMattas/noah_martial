@@ -162,7 +162,7 @@ $headers = 'From: '.$email_from."\r\n".
  
 <?php
  
-  header("Location: ../index.html?success");
+  header("Location: ../index.html?success=true");
 
 }
  
