@@ -138,8 +138,8 @@
     animation-delay: 30s; 
 }
 
-#imgImage {
-
+.save {
+    margin-top: 15px;
 }
 
 .form-builder-layout-1 {

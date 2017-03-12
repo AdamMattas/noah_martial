@@ -44,7 +44,11 @@ if(isset($_POST['email'])) {
 
         !isset($_POST['telephone2']) ||
 
-        !isset($_POST['telephone3'])) {
+        !isset($_POST['telephone3']) || 
+
+        !isset($_POST['zip']) || 
+
+        !isset($_POST['location'])) {
  
         died('We are sorry, but there appears to be a problem with the form you submitted.');       
  
@@ -63,6 +67,10 @@ if(isset($_POST['email'])) {
     $telephone2 = $_POST['telephone2']; // not required
 
     $telephone3 = $_POST['telephone3']; // not required
+
+    $zip = $_POST['zip']; // required
+
+    $location = $_POST['location']; // required
  
      
  
@@ -121,6 +129,10 @@ if(isset($_POST['email'])) {
     $email_message .= "Telephone2: ".clean_string($telephone2)."\n";
 
     $email_message .= "Telephone3: ".clean_string($telephone3)."\n";
+
+    $email_message .= "Zip Code: ".clean_string($zip)."\n";
+
+    $email_message .= "Location: ".clean_string($location)."\n";
  
      
  
@@ -150,7 +162,7 @@ $headers = 'From: '.$email_from."\r\n".
  
 <?php
  
-  header("Location: ../index.html");
+  header("Location: ../index.html?success");
 
 }
  
