@@ -377,60 +377,69 @@ blocks for our system are monthly themes such as:</p>
     Ã—</button></div>
     </div>
     <div class="form">
-        <div class="row">
-<label>*Name</label>
-<div class="row">
-<div class="span6">
-<input id="grQur8_uAkmVDorrIPFCmA,0" type="text" autocomplete="off" data-placehold="First Name" class="watermark" style="color: rgb(161, 161, 161);">
-</div>
-<div class="span6">
-<input id="grQur8_uAkmVDorrIPFCmA,1" type="text" autocomplete="off" data-placehold="Last Name" class="watermark" style="color: rgb(161, 161, 161);">
-</div>
-</div>
-</div>
-<div class="row">
-<label>*Email</label>
-<input id="xt08-D7Zi02qBuvmISzwUQ" type="text" autocomplete="off">
-</div>
-<div class="row">
-<label>Phone</label>
-<div class="row phone-number">
-<div class="phone-1">
-<input id="U2ZZSXiRjEqRBvJ-oCVYgg,1" type="tel" autocomplete="off" data-placehold="XXX" maxlength="3" class="watermark" style="color: rgb(161, 161, 161);">
-</div>
-<div class="phone-2">
-<input id="U2ZZSXiRjEqRBvJ-oCVYgg,2" type="tel" autocomplete="off" data-placehold="XXX" maxlength="3" class="watermark" style="color: rgb(161, 161, 161);">
-</div>
-<div class="phone-3">
-<input id="U2ZZSXiRjEqRBvJ-oCVYgg,3" type="tel" autocomplete="off" data-placehold="XXXX" maxlength="4" class="watermark" style="color: rgb(161, 161, 161);">
-</div>
-</div>
-</div>
-<div class="row">
-<label>*ZIP</label>
-<div class="alert alert-error hide">
-<button type="button" class="close" data-dismiss="alert">Ã—</button>
-Please provide the required field.
-</div>
-<div class="custom-select done"><span class="fp-el custom-text" style="width: 638px;">Select</span><div class="select-list custom-scroll maxlength" style="display: none;"><div class="select-scroll" style="height: 110px;"><span class="scroll-drag" style="height: 110px; top: 0px;"><!-- --></span></div><ul style="width: 664px; height: 110px; top: 0px;"><li class="fp-el selected" data-value="s-g_R7uKYEGQnEtw2nLLIg,0">Select</li><li class="fp-el" data-value="s-g_R7uKYEGQnEtw2nLLIg,1">Cranford - Westfield</li><li class="fp-el" data-value="s-g_R7uKYEGQnEtw2nLLIg,2">East Brunswick - Milltown</li><li class="fp-el" data-value="s-g_R7uKYEGQnEtw2nLLIg,3">Edison - Metuchen</li><li class="fp-el" data-value="s-g_R7uKYEGQnEtw2nLLIg,4">Ocean Twp - Oakhurst</li></ul></div><select class="selectik" autocomplete="off" id="s-g_R7uKYEGQnEtw2nLLIg">
-<option value="s-g_R7uKYEGQnEtw2nLLIg,0">Select
-</option><option data-val="Cranford - Westfield" value="s-g_R7uKYEGQnEtw2nLLIg,1">Cranford - Westfield
-</option><option data-val="East Brunswick - Milltown" value="s-g_R7uKYEGQnEtw2nLLIg,2">East Brunswick - Milltown
-</option><option data-val="Edison - Metuchen" value="s-g_R7uKYEGQnEtw2nLLIg,3">Edison - Metuchen
-</option><option data-val="Ocean Twp - Oakhurst" value="s-g_R7uKYEGQnEtw2nLLIg,4">Ocean Twp - Oakhurst
-</option></select></div>
-</div>
+        <!-- <form id="contactform" method="post" action="php_parsers/sendgrid_form_email.php"> -->
+        <!-- Used for sendgrid email on heroku -->
+        <form id="contactform" method="post" action="php_parsers/send_form_email.php">
+            <div class="row">
+                <div class="row">
+                    <div class="span6">
+                        <label>*First Name</label>
+                        <input id="grQur8_uAkmVDorrIPFCmA,0" type="text" name="first_name" autocomplete="off" data-placehold="First Name" class="watermark" style="color: rgb(161, 161, 161);" required/>
+                    </div>
+                    <div class="span6">
+                        <label>*Last Name</label>
+                        <input id="grQur8_uAkmVDorrIPFCmA,1" type="text" name="last_name" autocomplete="off" data-placehold="Last Name" class="watermark" style="color: rgb(161, 161, 161);" required/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <label>*Email</label>
+                <input id="xt08-D7Zi02qBuvmISzwUQ" name="email" type="text" autocomplete="off" required/>
+            </div>
+            <div class="row">
+                <label>Phone</label>
+                <div class="row phone-number">
+                    <div class="phone-1">
+                        <input id="U2ZZSXiRjEqRBvJ-oCVYgg,1" type="tel" name="telephone1" autocomplete="off" data-placehold="XXX" maxlength="3" class="watermark" style="color: rgb(161, 161, 161);">
+                    </div>
+                    <div class="phone-2">
+                        <input id="U2ZZSXiRjEqRBvJ-oCVYgg,2" type="tel" name="telephone2" autocomplete="off" data-placehold="XXX" maxlength="3" class="watermark" style="color: rgb(161, 161, 161);">
+                    </div>
+                    <div class="phone-3">
+                        <input id="U2ZZSXiRjEqRBvJ-oCVYgg,3" type="tel" name="telephone3" autocomplete="off" data-placehold="XXXX" maxlength="4" class="watermark" style="color: rgb(161, 161, 161);">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <label>*ZIP</label>
+                <input name="zip" type="text" required/>
+                <div class="alert alert-error hide">
+                    <button type="button" class="close" data-dismiss="alert">Ã—</button>
+                    Please provide the required field.
+                </div>
+            </div>
+            <div class="row">
+              <label>*Location</label>
+              <select class="selectik" name="location" autocomplete="off" id="s-g_R7uKYEGQnEtw2nLLIg" required>
+                <option value="">Select</option>
+                <option data-val="Cranford - Westfield" value="s-g_R7uKYEGQnEtw2nLLIg,1">Cranford - Westfield</option>
+                <option data-val="East Brunswick - Milltown" value="s-g_R7uKYEGQnEtw2nLLIg,2">East Brunswick - Milltown</option>
+                <option data-val="Edison - Metuchen" value="s-g_R7uKYEGQnEtw2nLLIg,3">Edison - Metuchen
+                </option>
+                <option data-val="Ocean Twp - Oakhurst" value="s-g_R7uKYEGQnEtw2nLLIg,4">Ocean Twp - Oakhurst
+                </option>
+              </select>
+            </div>
+            <div class="art-reward-points">
+              <button id="ctl01_aFormSubmit" class="btn btn-primary save pull-left" type="submit" title="Submit">Submit</button>
+          
+          
+              <div class="loading pull-left">
+              </div>
+            </div>
+        </form>
     </div>
-    <div class="row clearfix">
-    <div class="art-reward-points">
-        <a href="javascript:void(0);" id="ctl01_aFormSubmit" class="btn btn-primary save pull-left" title="Submit">
-Submit</a>
-        
-        
-        <div class="loading pull-left">
-        </div>
-        </div>
-    </div>
+
     <input type="hidden" name="ctl01$fields" id="ctl01_fields" value="[{&quot;required&quot;:true,&quot;id&quot;:17119,&quot;field&quot;:&quot;grQur8_uAkmVDorrIPFCmA&quot;},{&quot;required&quot;:true,&quot;id&quot;:17121,&quot;field&quot;:&quot;xt08-D7Zi02qBuvmISzwUQ&quot;},{&quot;required&quot;:false,&quot;id&quot;:17120,&quot;field&quot;:&quot;U2ZZSXiRjEqRBvJ-oCVYgg&quot;},{&quot;required&quot;:true,&quot;id&quot;:17118,&quot;field&quot;:&quot;s-g_R7uKYEGQnEtw2nLLIg&quot;}]">
 </div>
 
