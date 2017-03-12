@@ -6,9 +6,9 @@ if(isset($_POST['email'])) {
  
     // EDIT THE 2 LINES BELOW AS REQUIRED
  
-    $email_to = "adamfader@gmail.com";
+    $email_to = "tonstorm83@yahoo.com";
  
-    $email_subject = "Your email subject line";
+    $email_subject = "ATA Martial Arts Contact Form";
  
      
  
@@ -162,8 +162,12 @@ $headers = 'From: '.$email_from."\r\n".
  
 <?php
  
-  header("Location: ../index.html?success=true");
+  // header("Location: ../index.html?success=true");
+  
 
 }
  
 ?>
+<script type="text/javascript">
+  window.location.href = '../index.html?success=true"';
+</script>
